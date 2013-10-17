@@ -33,9 +33,8 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/setup-recovery"
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_x3_defconfig
-# Keep this as a fallback
-TARGET_PREBUILT_KERNEL := device/lge/p880/kernel
+TARGET_KERNEL_SOURCE := kernel/lge/x3
+#TARGET_KERNEL_CONFIG := custom_x3_defconfig
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB = device/lge/p880/fstab.x3
@@ -95,3 +94,26 @@ BOARD_SEPOLICY_UNION := \
 endif
 
 BOARD_HARDWARE_CLASS := device/lge/p880/cmhw/
+
+# TWRP
+DEVICE_RESOLUTION := 720x1280
+#LANDSCAPE_RESOLUTION := 1280x720
+
+RECOVERY_SDCARD_ON_DATA := true
+TW_INCLUDE_JB_CRYPTO := true
+
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTESS := 255
+
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/p880/recovery-kernel
+
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/tegra-udc.0/gadget/lun0/file"
+TW_INCLUDE_FB2PNG := true
+
+TWHAVE_SELINUX := true

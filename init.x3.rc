@@ -303,7 +303,7 @@ on boot
 
     # Torch perms
     chown system camera /sys/devices/platform/tegra-i2c.2/i2c-2/2-0053/torch
-    chmod 0660 /sys/devices/platform/tegra-i2c.2/i2c-2/2-0053/torch
+    chmod 0666 /sys/devices/platform/tegra-i2c.2/i2c-2/2-0053/torch
 
 service nvcpud /system/bin/nvcpud
     class main
