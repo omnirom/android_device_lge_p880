@@ -16,16 +16,16 @@ LOCAL_PATH := device/lge/p880
 
 ## Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    $(LOCAL_PATH)/prebuilt/recovery.sh:system/bin/setup-recovery
+    $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    $(LOCAL_PATH)/recovery/recovery.sh:system/bin/setup-recovery \
+    $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 ## Boot image
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.x3.rc:root/init.x3.rc \
-    $(LOCAL_PATH)/init.x3.usb.rc:root/init.x3.usb.rc \
-    $(LOCAL_PATH)/ueventd.x3.rc:root/ueventd.x3.rc \
-    $(LOCAL_PATH)/fstab.x3:root/fstab.x3 \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/rootdir/init.x3.rc:root/init.x3.rc \
+    $(LOCAL_PATH)/rootdir/init.x3.usb.rc:root/init.x3.usb.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.x3.rc:root/ueventd.x3.rc \
+    $(LOCAL_PATH)/rootdir/fstab.x3:root/fstab.x3
 
 ## Miscellaneous configs
 PRODUCT_COPY_FILES += \

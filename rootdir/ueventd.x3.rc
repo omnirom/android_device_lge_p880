@@ -41,8 +41,8 @@
 /dev/video0	0660	media	camera
 /dev/video1	0660	media	camera
 /dev/tf_driver  0666    system  system
-# Begin Immersion changes 
-/dev/tspdrv               0666   root       root
+# Begin Immersion changes
+/dev/tspdrv	0666	root	root
 # End Immersion changes
 /dev/ttyGS0	0660	system	system
 /dev/ttyGS1	0660	system	system
@@ -59,9 +59,8 @@
 /sys/devices/system/cpu/cpufreq/gov_interactive* ../interactive/max_boost 0644 system system
 /sys/devices/system/cpu/cpufreq/gov_interactive* ../interactive/go_maxspeed_load 0644 system system
 
-/dev/rfkill               0660   wifi       wifi
+/dev/rfkill	0660	wifi	wifi
 # GPS
-/dev/ttyHS1    0660    system  system
+/dev/ttyHS1	0660	system	system
 # NFC
-/dev/pn544     0600    nfc     nfc
-
+/dev/pn544	0600	nfc	nfc
