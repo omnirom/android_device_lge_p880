@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES := vendor/omni/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit from the common AOSP product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
