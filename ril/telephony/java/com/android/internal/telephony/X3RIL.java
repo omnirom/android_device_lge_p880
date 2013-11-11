@@ -129,7 +129,7 @@ public class X3RIL extends RIL implements CommandsInterface {
         }
     }
 
-    protected void
+    protected RILRequest
     processSolicited (Parcel p) {
         int serial, error;
         boolean found = false;
@@ -157,7 +157,7 @@ public class X3RIL extends RIL implements CommandsInterface {
                                 rr.mResult.sendToTarget();
                             }
                             rr.release();
-                            return;
+                            return null;
                         }
                     } 
                 }
@@ -176,7 +176,7 @@ public class X3RIL extends RIL implements CommandsInterface {
         rr = findAndRemoveRequestFromList(serial);
 
         if (rr == null) {
-            return;
+            return null;
         }
 
         Object ret = null;
@@ -213,7 +213,7 @@ public class X3RIL extends RIL implements CommandsInterface {
             rr.mResult.sendToTarget();
         }
 
-        rr.release();
+        return rr;
     }
 
 }
