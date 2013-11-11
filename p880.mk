@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.x3.rc:root/init.x3.rc \
     $(LOCAL_PATH)/rootdir/init.x3.usb.rc:root/init.x3.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.recovery.x3.rc:root/init.recovery.x3.rc \
     $(LOCAL_PATH)/rootdir/ueventd.x3.rc:root/ueventd.x3.rc \
     $(LOCAL_PATH)/rootdir/fstab.x3:root/fstab.x3
 
@@ -117,3 +118,6 @@ PRODUCT_COPY_FILES += \
 # For SELinux
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/51selinux:system/etc/init.d/51selinux
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.boot.selinux=permissive
