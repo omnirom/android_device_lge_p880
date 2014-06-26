@@ -1,10 +1,10 @@
-# mount point	fstype		device
+# mount point   fstype        device
 
-/recovery	emmc		/dev/block/mmcblk0p1
-/boot		emmc		/dev/block/mmcblk0p2
-/system		ext4		/dev/block/mmcblk0p3
-/cache		ext4		/dev/block/mmcblk0p4
-/misc		emmc		/dev/block/mmcblk0p5
-/staging	emmc		/dev/block/mmcblk0p6
-/data		ext4		/dev/block/mmcblk0p8
-/external_sd	vfat		/dev/block/platform/sdhci-tegra.2/by-num/p1	flags=removable;storage
+/recovery       emmc          /dev/block/mmcblk0p1  # SOS
+/boot           emmc          /dev/block/mmcblk0p2  # LNX
+/system         ext4          /dev/block/mmcblk0p3  # APP
+/cache          ext4          /dev/block/mmcblk0p4  # CAC
+/data           ext4          /dev/block/mmcblk0p8  # UDA
+/persist-lg     ext4          /dev/block/mmcblk0p9  # DRM
+/mpt            ext4          /dev/block/mmcblk0p10 # MLT
+/external_sd    vfat          /dev/block/platform/sdhci-tegra.2/by-num/p1        flags=removable;storage

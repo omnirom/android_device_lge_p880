@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "omnirom",
-    "repository": "android_kernel_lge_x3",
-    "target_path": "kernel/lge/x3",
-    "revision": "android-4.4"
-  }
-]

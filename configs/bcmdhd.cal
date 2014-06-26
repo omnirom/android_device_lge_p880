@@ -13,7 +13,7 @@ macaddr=00:90:4c:c5:12:38
 ag0=0
 aa2g=1
 aa5g=1
-ccode=GB
+ccode=ALL
 pa0b0=0x146F
 pa0b1=0xFDB1
 pa0b2=0xFF69
@@ -36,7 +36,7 @@ pa1hib2=0xFF3C
 sromrev=3
 
 # 2.4G Tx Power
-maxp2ga0=76
+maxp2ga0=70
 ofdm2gpo=0x66666666
 mcs2gpo0=0x8888
 mcs2gpo1=0x8888
@@ -84,11 +84,9 @@ noise_cal_enable_5g=0
 txgaintbl5g=1
 # 5G Out-Band Spur
 loidacmode5g=1
-#for BT-coexistence 
-btc_params8=10000
-btc_params80=0
-btc_params6=10
-btc_params33=3 
+#btc_params8=10000
+#btc_params80=0
+#btc_params6=10
 # Init. tx Value
 initxidx5g=96
 

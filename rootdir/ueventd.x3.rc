@@ -63,4 +63,4 @@
 # GPS
 /dev/ttyHS1	0660	system	system
 # NFC
-/dev/pn544	0600	nfc	nfc
+/dev/pn544	0660	nfc	nfc
