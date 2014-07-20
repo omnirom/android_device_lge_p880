@@ -351,6 +351,19 @@ static bool ap_is_source_active(const struct audio_policy *pol,
     (void)(source);
     return 0;
 #else
+    switch (source) {
+        case AUDIO_SOURCE_REMOTE_SUBMIX:
+            source = AUDIO_SOURCE_DEFAULT;
+            break;
+
+        case AUDIO_SOURCE_HOTWORD:
+            source = AUDIO_SOURCE_VOICE_RECOGNITION;
+            break;
+
+        default:
+            break;
+    }
+
     RETURN_WRAPPED_CALL(pol, is_source_active, source);
 #endif
 }
